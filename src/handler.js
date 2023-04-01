@@ -52,9 +52,11 @@ const getNoteByIdHandler = (request, h) => {
 
   const note = notes.filter((n) => n.id === id)[0];
 
-  if (note !== "undifined") {
+  console.log(note);
+
+  if (note !== undefined) {
     return {
-      stateus: "success",
+      status: "success",
       data: {
         note,
       },
